@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {title: 'Add Form'}); %>  
+<body>
+  <!-- NAVBAR -->
+  <%- include('partials/navbar'); %>  
+
+  <h1>Add New Art</h1>
+
+  <!-- FORM -->
+  <form action="/arts/add" method="post">
+    <label">Art Name</label><br>
+    <input type="text" name="name" size="50"><br>
+    <label >Artist Name</label><br>
+    <input type="text" name="artist" size="50"><br>
+    <label">Created Date</label><br>
+    <input type="date" name="date"><br>
+    <label">Art Photo Url</label><br>
+    <input type="text" name="photo" size="50"><br>
+    <label">Art Description</label><br>
+    <textarea name="description" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="Add Art">
+  </form> 
+
+</body>
+</html>

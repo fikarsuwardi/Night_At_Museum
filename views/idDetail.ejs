@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {title: 'Id Detail'}); %>  
+<body>
+  <!-- NAVBAR -->
+  <%- include('partials/navbar'); %>  
+
+  <!-- IMAGE -->
+  <img src="<%= arts.photo %>" alt="" width="500">
+
+  <h1>Update Information</h1>
+
+  <!-- FORM -->
+  <form action="/arts/<%= arts.id %>/edit" method="post">
+    <label">Art Name</label><br>
+    <input type="text" name="name" value="<%= arts.name %>" size="50"><br>
+    <label >Artist Name</label><br>
+    <input type="text" name="artist" value="<%= arts.artist %>" size="50"><br>
+    <label">Created Date</label><br>
+    <input type="date" name="date" value="<%= arts.formatDate %>"><br>
+    <label">Art Photo Url</label><br>
+    <input type="text" name="photo" value="<%= arts.photo %>" size="50"><br>
+    <label">Art Description</label><br>
+    <textarea id="w3review" name="description" rows="4" cols="50"><%= arts.description %> </textarea><br>
+    <input type="submit" value="Update Art">
+  </form> 
+
+</body>
+</html>
